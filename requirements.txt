@@ -1,0 +1,2 @@
+pyyaml
+simple_term_menu
