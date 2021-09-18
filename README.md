@@ -1,6 +1,6 @@
 # SenseCon2021-TicTacPwn
 
-**WARNING** It is against discord's ToS to use your personal account as a bot. You may get banned when using this, you have been warned.
+**WARNING** It is against Discord's ToS to use your personal account as a bot. You may get banned for using this, you have been warned.
 
 ## Setup
 
@@ -16,9 +16,9 @@ pip3 install -r requirements.txt
 cp config.yml.example config.yml
 ```
 
-3. Intercept discord (webui + discord) and talk to WOPR.
+3. Intercept discord (Discord WebUI + Burp) and talk to WOPR.
 4. Win and lose a game of TicTacToe.
-5. Look at intercepted traffic and copy the following
+5. Look at intercepted traffic and copy the following:
    1. Copy _all_ cookies of a request and place these in `discord_cookies` as a dict.
    2. Copy _all_ headers of a request and place these is `discord_headers` as a dict.
    3. Copy the chat id (https://discord.com/channels/@me/ThisIsTheChatID) of WOPR and place this in `discord_chat_id` as a string.
