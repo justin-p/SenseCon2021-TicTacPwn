@@ -16,7 +16,7 @@ pip3 install -r requirements.txt
 cp config.yml.example config.yml
 ```
 
-3. Intercept discord (Discord WebUI + Burp) and talk to WOPR.
+3. Intercept Discord (Discord WebUI + Burp) and talk to WOPR.
 4. Win and lose a game of TicTacToe.
 5. Look at intercepted traffic and copy the following:
    1. Copy _all_ cookies of a request and place these in `discord_cookies` as a dict.
