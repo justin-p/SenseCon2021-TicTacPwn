@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from re import T
 from simple_term_menu import TerminalMenu
 import os
 import time
