@@ -184,7 +184,7 @@ class TicTacPwn:
                 if any(item in self.OurSpaces for item in ["2", "5", "8"]):
                     # We already blocked this sequence. No action needed.
                     print(
-                        "[-] 🤖Pwner has already blocked the middle top to down sequence.\n")
+                        "[-] 🤖Pwner has already blocked the 'middle top to down'-sequence.\n")
                     time.sleep(2)
                 else:
                     # Setup a new list with all open spaces.
@@ -199,8 +199,8 @@ class TicTacPwn:
                           str(tempopen[0]) + " to block.\n")
                     time.sleep(2)
 
-            # If there is more then 1 open space check if WOPR wins next turn using the 'middle left to right'-sequence (4,5,6).
-            if self.Block == False:
+            # If the previous checks did not find a needed block and there is more then 1 open space, check if WOPR wins next turn using the 'middle left to right'-sequence (4,5,6).
+            if self.Block == False and self.OneSpotLeft == False:
                 if (all(item in self.WOPRSpaces for item in ["4", "5"])
                     or all(item in self.WOPRSpaces for item in ["4", "6"])
                     or all(item in self.WOPRSpaces for item in ["5", "6"])
@@ -210,7 +210,7 @@ class TicTacPwn:
                     if any(item in self.OurSpaces for item in ["4", "5", "6"]):
                         # We already blocked this sequence. No action needed.
                         print(
-                            "[-] 🤖Pwner has already blocked the middle left to right sequence.\n")
+                            "[-] 🤖Pwner has already blocked the 'middle left to right'-sequence.\n")
                         time.sleep(2)
                     else:
                         tempopen = self.OpenSpaces
@@ -222,8 +222,8 @@ class TicTacPwn:
                             tempopen[0]) + " to block.\n")
                         time.sleep(2)
 
-            # If there is more then 1 open space check if WOPR will win next turn using the 'left top to bottom'-sequence (1,4,7).
-            if self.Block == False:
+            # If the previous checks did not find a needed block and there is more then 1 open space, check if WOPR will win next turn using the 'left top to bottom'-sequence (1,4,7).
+            if self.Block == False and self.OneSpotLeft == False:
                 if (all(item in self.WOPRSpaces for item in ["1", "4"])
                     or all(item in self.WOPRSpaces for item in ["1", "7"])
                     or all(item in self.WOPRSpaces for item in ["4", "1"])
@@ -232,7 +232,7 @@ class TicTacPwn:
                         or all(item in self.WOPRSpaces for item in ["7", "4"])):
                     if any(item in self.OurSpaces for item in ["1", "4", "7"]):
                         print(
-                            "[-] 🤖Pwner has already blocked the left top to bottom sequence.\n")
+                            "[-] 🤖Pwner has already blocked the 'left top to bottom'-sequence.\n")
                         time.sleep(2)
                     else:
                         tempopen = self.OpenSpaces
@@ -244,8 +244,8 @@ class TicTacPwn:
                             tempopen[0]) + " to block.\n")
                         time.sleep(2)
 
-            # If there is more then 1 open space check if WOPR will win next turn using the 'top left to right'-sequence.
-            if self.Block == False:
+            # If the previous checks did not find a needed block and there is more then 1 open space check, if WOPR will win next turn using the 'top left to right'-sequence.
+            if self.Block == False and self.OneSpotLeft == False:
                 if (all(item in self.WOPRSpaces for item in ["1", "2"])
                     or all(item in self.WOPRSpaces for item in ["1", "3"])
                     or all(item in self.WOPRSpaces for item in ["2", "1"])
@@ -266,7 +266,7 @@ class TicTacPwn:
                             tempopen[0]) + " to block.\n")
                         time.sleep(2)
 
-        # If WOPR has taken one of our spots find a new sequence.
+        # If the previous checks did not find a needed block and there is more then 1 open space, check if WOPR has taken one of our spots, ifso find a new sequence not containing this number.
         if self.OneSpotLeft == False and self.Block == False:
             if any(item in self.WOPRSpaces for item in self.BotPwnerSequence.values()):
                 taken_spot = list(set(self.WOPRSpaces) & set(
@@ -276,7 +276,6 @@ class TicTacPwn:
                 time.sleep(2)
                 for wp in self.winning_plays:
                     if wp[str(self.Turns+1)] != taken_spot:
-                        #print("switching to " + str(wp))
                         self.BotPwnerSequence = wp
                         break
 
