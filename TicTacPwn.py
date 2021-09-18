@@ -117,7 +117,7 @@ def StartPrimeWOPRToRevive(exit_function, game_ended):
             clear()
             TTP.PrintDEFCONLevel()
             TTP.PrintGlobalScores()
-            print("🙏 Hero's Never Die 🙏\nPress 'CTRL + C' to stop.\n")
+            PrintHerosNeverDie()
             while True:
                 clear()
 
@@ -128,7 +128,7 @@ def StartPrimeWOPRToRevive(exit_function, game_ended):
                 TTP.PrintDEFCONLevel()
                 TTP.PrintGlobalScores()
                 TTP.PrintOurScores()
-                print("🙏 Hero's Never Die 🙏\nPress 'CTRL + C' to stop.\n")
+                PrintHerosNeverDie()
 
                 TTP.GetCurrentMessage()
                 TTP.SendStartGame()
@@ -146,7 +146,7 @@ def StartPrimeWOPRToRevive(exit_function, game_ended):
                     TTP.PrintGlobalScores()
                     TTP.PrintOurScores()
 
-                    print("🙏 Hero's Never Die 🙏\nPress 'CTRL + C' to stop.\n")
+                    PrintHerosNeverDie()
                     if TTP.GameStatus in ["won", "lost", "tied", "timeout"]:
                         game_ended = True
                         TTP.UpdateScores()
