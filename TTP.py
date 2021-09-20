@@ -93,7 +93,7 @@ class TicTacPwn:
         self.GameID = self.CurrentGameMessage['id']
 
     def ParseGameState(self):
-        # Parse the output of the current message. Identify the state of the game based.
+        # Parse the output of the current message. Identify the state of the game.
         if re.search(r'make a move', self.CurrentGameMessage['content'], re.DOTALL) != None:
             self.GameStatus = 'clean'
         elif re.search(r'thinking', self.CurrentGameMessage['content'], re.DOTALL) != None:
