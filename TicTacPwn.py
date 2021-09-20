@@ -79,7 +79,10 @@ def StartBotPwnerGame(exit_function):
 
 def StartPrimeWOPRToKill(exit_function):
     # Function that loops indefinitely until canceld with CTRL+C.
-    # Keeps starting new games. When they timeout the result in a win for WOPR, raising the DEFCON Level.
+    # Keeps starting new games and not actually playing them.
+    # If a game is left 'open/running' for to long this will result in a timeout.
+    # A timed out game will be counted as WOPR winning the match, thus raising the DEFCON Level.
+    # Takes a while to get going. The highest total amount of wins for WOPR I was able to get during SenseCon2021 was around 1290.
     while not exit_function:
         i = 0
         clear()
@@ -110,7 +113,7 @@ def StartPrimeWOPRToKill(exit_function):
 
 def StartPrimeWOPRToRevive(exit_function, game_ended):
     # Function that loops indefinitely until canceld with CTRL+C.
-    # Uses BotPwner to win games, which lowers the DEFCON Level.
+    # Uses BotPwner logic to win games, which lowers the DEFCON Level.
     while not exit_function:
         try:
             clear()
