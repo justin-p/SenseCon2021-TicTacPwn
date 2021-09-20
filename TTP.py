@@ -169,9 +169,9 @@ class TicTacPwn:
             self.OneSpotLeft = True
             self.OneSpotLeftPlay = self.OpenSpaces[0]
 
-        # TODO: add check that ensures if we win next turn ignore all other checks and play as normal. Currently AutoPwner pefers blocking WOPR over winning.
+        # TODO: add check that ensures if we win next turn to ignore all other checks and play as normal. Currently AutoPwner prefers blocking WOPR over winning.
 
-        # TODO: add check to ensure if there is no more way we can win that we finish the game in a draw.
+        # TODO: add check to ensure that if there is no more way we can win that we finish the game in a draw.
 
         # If there is more then 1 open space check if WOPR wins next turn using the 'middle top to down'-sequence (2,5,8).
         if self.OneSpotLeft == False:
