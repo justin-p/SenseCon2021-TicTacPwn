@@ -1,6 +1,6 @@
 auth: mfa.A12346789a
 discord_cookies: {"__dcfduid": "A123456", "__sdcfduid": "A123456","OptanonConsent": "isIABGlobal=BlaBlaBla"}
-discord_headers: {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0", "Accept": "*/*","Accept-Language": "en-US", "Accept-Encoding": "gzip, deflate", "Content-Type": "application/json", "Authorization": "mfa.A12346789","X-Super-Properties": "BlaBlaBla, "X-Debug-Options": "bugReporterEnabled", "Origin": "https://discord.com", "Dnt": "1", "Referer": ("https://discord.com/channels/@me/A13456789"), "Sec-Gpc": "1", "Te": "trailers"}
+discord_headers: {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0", "Accept": "*/*","Accept-Language": "en-US", "Accept-Encoding": "gzip, deflate", "Content-Type": "application/json", "Authorization": "mfa.A12346789","X-Super-Properties": "BlaBlaBla", "X-Debug-Options": "bugReporterEnabled", "Origin": "https://discord.com", "Dnt": "1", "Referer": ("https://discord.com/channels/@me/A13456789"), "Sec-Gpc": "1", "Te": "trailers"}
 discord_chat_id: "A12346789a"
 discord_mention_you: "A12346789a"
 discord_mention_wopr: "A12346789a"
